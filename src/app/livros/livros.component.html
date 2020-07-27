@@ -1,0 +1,42 @@
+<h1 class="left">Livros</h1>
+<p class="left">
+  Olá!
+  Aqui serão exibidos os livros da {{titulo}}
+</p>
+<br>
+<!--
+<h2>Autores</h2>
+<ul *ngFor="let autor of autores">
+  <img [src]="autor.imgAutor">
+  <p>
+    {{autor.nomeAutor}}
+  </p>
+</ul>
+-->
+
+<!--
+  <img src="https://www.revistabula.com/wp/wp-content/uploads/2016/01/Livros-610x350.jpg" description="Livros">
+-->
+
+
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4" *ngFor="let livro of livros">
+      <div class="card" style="width: 18rem;" style="margin-bottom: 40px">
+        <div class="card-body">
+          <h5 class="card-title">{{livro.titulo}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
+          <p class="card-text">{{livro.edicao}} - {{livro.numeroPaginas}} páginas</p>
+          <a href="#" class="card-link">Ver livro</a>
+          <a href="#" class="card-link" [routerLink]="['/livroPorAutor', livro.autor]">Ver autor</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

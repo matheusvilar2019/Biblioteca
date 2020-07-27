@@ -1,0 +1,30 @@
+
+<h1 class="left">Publicar Autor</h1>
+<p class="left">
+  Publique o autor aqui
+</p>
+<div class="left">
+  <form (submit)="publicarAutor()" [formGroup]="dataForm">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Nome do Autor</label>
+      <input formControlName="nomeAutor" type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Autor" style="width: 450px">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Imagem do Autor</label>
+      <input formControlName="imgAutor" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Imagem do Autor" style="width: 450px">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput3">Area do Autor</label>
+      <input formControlName="areaAutor" type="text" class="form-control" id="formGroupExampleInput3" placeholder="Area do Autor" style="width: 450px">
+    </div>
+
+    <!--
+      <div class="form-group">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="width: 450px"></textarea>
+    </div>
+    -->
+    <button type="submit" class="btn btn-primary mb-2" style="width: 125px">Publicar</button>
+  </form>
+  
+</div>
