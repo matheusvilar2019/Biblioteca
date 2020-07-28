@@ -1,0 +1,30 @@
+<h1 class="left">
+  Alterar Livro
+</h1>
+
+<div class="left">
+  <form (submit)="alterarLivro()" [formGroup]="dataForm">
+    <div class="form-group">
+      <label for="formExampleInput">ID do Livro</label>
+      <input formControlName="id" type="text" class="form-control" id="formExampleInput" placeholder="Nome do Livro" style="width: 450px">
+    </div>
+    <div class="form-group">
+      <label for="formExampleInput2">Nome do Livro</label>
+      <input formControlName="titulo" type="text" class="form-control" id="formExampleInput2" placeholder="Novo nome do Livro" Style="width: 450px">
+    </div>
+    <div class="form-group">
+      <label for="formExampleInput3">Autor</label>
+      <input formControlName="autor" type="text" class="form-control" id="formExampleInput3" placeholder="Novo nome do Autor" Style="width: 450px">
+    </div>
+    <div class="form-group">
+      <label for="formExampleInput4">Paginas</label>
+      <input formControlName="numeroPaginas" type="text" class="form-control" id="formExampleInput4" placeholder="Nova Quantidade de páginas" Style="width: 450px">
+    </div>
+    <div class="form-group">
+      <label for="formExampleInput5">Edição</label>
+      <input formControlName="edicao" type="text" class="form-control" id="formExampleInput5" placeholder="Nova Edição" Style="width: 450px">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" style="width: 125px">Alterar</button>
+
+  </form>
+</div>
