@@ -32,6 +32,7 @@
           <p class="card-text">{{livro.edicao}} - {{livro.numeroPaginas}} páginas</p>
           <a href="#" class="card-link">Ver livro</a>
           <a href="#" class="card-link" [routerLink]="['/livroPorAutor', livro.autor]">Ver autor</a>
+          <a class="card-link" [routerLink]="['/alterarLivro', livro.id, livro.titulo, livro.autor, livro.numeroPaginas, livro.edicao]">Alterar Livro</a>
         </div>
       </div>
     </div>

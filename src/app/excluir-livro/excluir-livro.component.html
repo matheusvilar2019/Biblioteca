@@ -1,0 +1,15 @@
+<h1 class="left">
+  Excluir Livro
+</h1>
+
+
+<div class="left">
+  <form (submit)="excluirLivro()" [formGroup]="dataForm">
+    <div class="form-group">
+      <label for="idDoLivro">Id do Livro</label>
+      <input formControlName="id" type="text" class="form-control" id="idDoLivro" placeholder="Digite o ID do livro" style="width:450px">
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-2" style="width: 125px">Excluir</button> 
+  </form>
+</div>

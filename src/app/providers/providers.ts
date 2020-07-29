@@ -23,4 +23,8 @@ export class Providers {
     return this.http.put(API_URL + '/livro/alterar/', dadosLivro).pipe(take(1));
   }
 
+  remove(dadosLivro){
+    return this.http.delete(API_URL + '/livro/excluir/' + dadosLivro).pipe(take(1));
+  }
+
 }
