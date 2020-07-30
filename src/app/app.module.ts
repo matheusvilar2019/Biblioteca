@@ -13,7 +13,7 @@ import { PublicarAutorComponent } from './publicar-autor/publicar-autor.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Providers } from './providers/providers';
 import { PublicarLivroComponent } from './publicar-livro/publicar-livro.component';
-import { LivroPorAutorComponent } from './livro-por-autor/livro-por-autor.component';
+import { LivroPorAutorComponent } from './livro-por-autor/livro-por-autor.component'; 
 import { AlterarLivroComponent } from './alterar-livro/alterar-livro.component';
 import { ExcluirLivroComponent } from './excluir-livro/excluir-livro.component';
 

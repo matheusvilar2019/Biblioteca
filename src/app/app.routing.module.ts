@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule, ExtraOptions } from "@angular/router";
 import { LivrosComponent } from "./livros/livros.component";
 import { AutoresComponent } from "./autores/autores.component";
 import { InicialComponent } from "./inicial/inicial.component";
@@ -20,9 +20,15 @@ const routes: Routes = [
     { path: '**', component: InicialComponent}
 ];
 
+const routerOptions: ExtraOptions = {
+    useHash: false,
+    anchorScrolling: 'enabled',
+    // ...any other options you'd like to use
+  };
+
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes, routerOptions)
     ],
     exports: [ RouterModule ]
 })

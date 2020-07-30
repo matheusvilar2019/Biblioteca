@@ -1,7 +1,32 @@
-<h1 class="left">
-  Livros de {{nomeAutor}}
-</h1>
-<br>
+<div class="container">
+  <div class="row">
+
+    <div class="col-12 text-center my-5">
+
+      <h1 class="display-1">{{nomeAutor}}</h1>
+      <p>Filósofo</p>
+
+    </div>
+    
+  </div>
+
+  <div class="row">
+  
+    <div>
+      <div data-spy="scroll" data-target="#navbarVertical" data-offset="0">
+  
+        <h4 id="item1">Resumo</h4>
+        <p>
+          Aristóteles (em grego clássico: Ἀριστοτέλης; transl.: Aristotélēs; Estagira, 384 a.C. — Atenas, 322 a.C.) foi um filósofo grego durante o período clássico na Grécia antiga, fundador da escola peripatética e do Liceu, além de ter sido aluno de Platão e professor de Alexandre, o Grande.[2] Seus escritos abrangem diversos assuntos como: a física, a metafísica, as leis da poesia e do drama, a música, a lógica, a retórica, o governo, a ética, a biologia, a linguística, a economia e a zoologia. Juntamente com Platão e Sócrates (professor de Platão), Aristóteles é visto como um dos fundadores da filosofia ocidental. Em 343 a.C. torna-se tutor de Alexandre da Macedónia, na época com treze anos de idade, que será o mais célebre conquistador do mundo antigo. Em 335 a.C. Alexandre assume o trono e Aristóteles volta para Atenas onde funda o Liceu.
+        </p>        
+  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <!-- LINK DO SCROLLSPY https://www.youtube.com/watch?v=MeWjI1mOfyo 
 
 <div class="container">
@@ -101,11 +126,15 @@
 </div>
 -->
 
+<h1 class="display-4" style="text-align: center; margin-top: 40px;">
+  Livros de {{nomeAutor}}
+</h1>
+
 <div class="container">
   <div class="row">
 
     <div class="col-md-4" *ngFor="let livro of livros">
-      <div class="card" style="width: 18rem;" style="margin-bottom: 40px">
+      <div class="card" style="width: 18rem;" style="margin-top: 40px">
         <div class="card-body">
           <h5 class="card-title">{{livro.titulo}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
