@@ -16,7 +16,7 @@ const routes: Routes = [
     { path: 'publicarLivro', component: PublicarLivroComponent },
     { path: 'livroPorAutor/:nomeAutor', component: LivroPorAutorComponent },
     { path: 'alterarLivro/:id/:titulo/:autor/:numeroPaginas/:edicao', component: AlterarLivroComponent},
-    { path: 'excluirLivro', component: ExcluirLivroComponent},
+    { path: 'excluirLivro/:id', component: ExcluirLivroComponent},
     { path: '**', component: InicialComponent}
 ];
 

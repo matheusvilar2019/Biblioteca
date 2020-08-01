@@ -29,7 +29,8 @@ export class PublicarAutorComponent implements OnInit {
     this.dataForm = new FormGroup({
       nomeAutor: new FormControl(),
       imgAutor: new FormControl(),
-      areaAutor: new FormControl()
+      areaAutor: new FormControl(),
+      resumoAutor: new FormControl()
     });
 
   }

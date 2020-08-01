@@ -3,13 +3,20 @@
 </h1>
 
 
-<div class="left">
-  <form (submit)="excluirLivro()" [formGroup]="dataForm">
-    <div class="form-group">
-      <label for="idDoLivro">Id do Livro</label>
-      <input formControlName="id" type="text" class="form-control" id="idDoLivro" placeholder="Digite o ID do livro" style="width:450px">
-    </div>
 
-    <button type="submit" class="btn btn-primary mb-2" style="width: 125px">Excluir</button> 
-  </form>
+<div class="container" style="padding-bottom: 30px;">
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="card" style="width: 18rem;" style="margin-top: 40px">
+        <div class="card-body">
+          <h5 class="card-title">{{livro.titulo}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{livro.titulo}}</h6>
+          <p class="card-text">{{livro.titulo}} - {{livro.numeroPaginas}} páginas</p>
+        </div>
+      </div>
+
+    </div>   
+  </div>
+  <button class="btn btn-primary mb-2" (click)="excluirLivro()" style="width: 125px; margin-top: 15px">Excluir</button>
 </div>

@@ -20,23 +20,26 @@
 
 
 
-
 <div class="container">
   <div class="row">
 
+    
+
     <div class="col-md-4" *ngFor="let livro of livros">
+
       <div class="card" style="width: 18rem;" style="margin-bottom: 40px">
         <div class="card-body">
           <h5 class="card-title">{{livro.titulo}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
           <p class="card-text">{{livro.edicao}} - {{livro.numeroPaginas}} páginas</p>
           <a href="#" class="card-link">Ver livro</a>
-          <a href="#" class="card-link" [routerLink]="['/livroPorAutor', livro.autor]">Ver autor</a>
-          <a class="card-link" [routerLink]="['/alterarLivro', livro.id, livro.titulo, livro.autor, livro.numeroPaginas, livro.edicao]">Alterar Livro</a>
+          <a href="#" class="card-link" [routerLink]="['/livroPorAutor', livro.autor]">Autor</a>
+          <a class="card-link" [routerLink]="['/alterarLivro', livro.id, livro.titulo, livro.autor, livro.numeroPaginas, livro.edicao]">Alterar</a>
+          <a class="card-link" [routerLink]="['/excluirLivro', livro.id]">Excluir</a>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
 

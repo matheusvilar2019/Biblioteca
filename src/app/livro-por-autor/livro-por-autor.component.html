@@ -1,10 +1,10 @@
-<div class="container">
+<div *ngFor = "let a of autor" class="container">
   <div class="row">
 
     <div class="col-12 text-center my-5">
 
       <h1 class="display-1">{{nomeAutor}}</h1>
-      <p>Filósofo</p>
+      <p>{{a.areaAutor}}</p>
 
     </div>
     
@@ -15,8 +15,8 @@
     <div>
       <div data-spy="scroll" data-target="#navbarVertical" data-offset="0">
   
-        <h4 id="item1">Resumo</h4>
-        <div *ngFor = "let a of autor">
+        <h4 id="item1">Sobre o Autor</h4>
+        <div>
           <p [innerText]="a.resumoAutor">
           </p>
           
@@ -142,7 +142,8 @@
           <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
           <p class="card-text">{{livro.edicao}} - {{livro.numeroPaginas}} páginas</p>
           <a href="#" class="card-link">Ver livro</a>
-          <a href="#" class="card-link">Ver autor</a>
+          <a class="card-link" [routerLink]="['/alterarLivro', livro.id, livro.titulo, livro.autor, livro.numeroPaginas, livro.edicao]">Alterar</a>
+          <a class="card-link" [routerLink]="['/excluirLivro', livro.id]">Excluir</a>
         </div>
       </div>
     </div>
