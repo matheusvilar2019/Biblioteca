@@ -16,9 +16,11 @@
       <div data-spy="scroll" data-target="#navbarVertical" data-offset="0">
   
         <h4 id="item1">Resumo</h4>
-        <p>
-          Aristóteles (em grego clássico: Ἀριστοτέλης; transl.: Aristotélēs; Estagira, 384 a.C. — Atenas, 322 a.C.) foi um filósofo grego durante o período clássico na Grécia antiga, fundador da escola peripatética e do Liceu, além de ter sido aluno de Platão e professor de Alexandre, o Grande.[2] Seus escritos abrangem diversos assuntos como: a física, a metafísica, as leis da poesia e do drama, a música, a lógica, a retórica, o governo, a ética, a biologia, a linguística, a economia e a zoologia. Juntamente com Platão e Sócrates (professor de Platão), Aristóteles é visto como um dos fundadores da filosofia ocidental. Em 343 a.C. torna-se tutor de Alexandre da Macedónia, na época com treze anos de idade, que será o mais célebre conquistador do mundo antigo. Em 335 a.C. Alexandre assume o trono e Aristóteles volta para Atenas onde funda o Liceu.
-        </p>        
+        <div *ngFor = "let a of autor">
+          <p [innerText]="a.resumoAutor">
+          </p>
+          
+        </div>
   
       </div>
     </div>
