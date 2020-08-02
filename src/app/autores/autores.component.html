@@ -13,8 +13,9 @@
           height="300px">
         <div class="card-body">
           <h5 class="card-title">{{autor.nomeAutor}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+          <p class="card-text"  style="text-align: justify; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;">
+            {{autor.resumoAutor}}
+          </p>
           <a class="btn btn-primary" [routerLink]="['/livroPorAutor', autor.nomeAutor]">{{autor.nomeAutor}}</a>
         </div>
       </div>

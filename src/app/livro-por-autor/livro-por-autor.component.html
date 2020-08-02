@@ -1,4 +1,4 @@
-<div *ngFor = "let a of autor" class="container">
+<div *ngFor="let a of autor" class="container">
   <div class="row">
 
     <div class="col-12 text-center my-5">
@@ -7,126 +7,25 @@
       <p>{{a.areaAutor}}</p>
 
     </div>
-    
+
   </div>
 
   <div class="row">
-  
-    <div>
+
+    <div style="margin: 0px 20px 0px 20px;">
       <div data-spy="scroll" data-target="#navbarVertical" data-offset="0">
-  
-        <h4 id="item1">Sobre o Autor</h4>
+
         <div>
-          <p [innerText]="a.resumoAutor">
-          </p>
-          
+          <h4 id="item1">Sobre o Autor</h4>
+            <p style="text-align: justify;" [innerText]="a.resumoAutor">
+            </p>
         </div>
-  
+
+
       </div>
     </div>
   </div>
 </div>
-
-
-
-<!-- LINK DO SCROLLSPY https://www.youtube.com/watch?v=MeWjI1mOfyo 
-
-<div class="container">
-  <div class="row">
-
-    <div class="col-12 text-center my-5">
-
-      <h1 class="display-3">Lorem ipsum dolor</h1>
-      <p>Praesent erat magna, tristique ac mauris ut, iaculis tincidunt velit</p>
-
-    </div>
-    
-  </div>
-
-  <div class="row">
-
-    <div class="col-3">
-
-      <nav id="navbarVertical" class="navbar navbar-light bg-light">
-  
-        <nav class="nav nav-pills flex-column">
-  
-          <a class="nav-link my-2" href="#item1">Lorem ipsum</a>
-  
-          <nav class="nav nav-pills flex-column">
-  
-            <a class="nav-link ml-3" href="#item1-1">Nullam fringilla</a>
-  
-            <a class="nav-link ml-3" href="#item1-2">Donec vel</a>
-  
-          </nav>
-  
-          <a class="nav-link my-2" href="#item2">Aenean rutrum</a>
-  
-          <a class="nav-link my-2" href="#item3">Ut eget</a>
-  
-          <nav class="nav nav-pills flex-column">
-  
-            <a class="nav-link ml-3" href="#item3-1">Nunc eget</a>
-  
-            <a class="nav-link ml-3" href="#item3-2">Ut consectetur</a>
-            
-          </nav>
-  
-        </nav>
-  
-      </nav>
-  
-    </div>
-  
-    <div class="col-9">
-      <div data-spy="scroll" data-target="#navbarVertical" data-offset="0">
-  
-        <h4 id="item1">Lorem ipsum</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat fringilla dui sed vestibulum. In ultricies libero vitae sapien dapibus vehicula. Aliquam rutrum, leo id sollicitudin sollicitudin, sapien justo suscipit dolor, quis feugiat lorem neque iaculis ante. Nam vehicula aliquet velit, facilisis suscipit justo pretium id. Nullam eu interdum lorem.
-        </p>
-  
-        <h5 id=item1-1>Quisque non libero</h5>
-        <p>
-          tempor, mattis mi sed, finibus eros. Sed ultricies pretium commodo. Donec quis massa nec arcu gravida iaculis. Praesent ut ultrices dolor. Nunc lacinia cursus diam, non bibendum mi tincidunt eget. Praesent euismod tempus dui non scelerisque. Aliquam bibendum facilisis elit ac tincidunt. Quisque ac facilisis orci, ac accumsan neque
-        </p>
-  
-        <h5 id=item1-2>Phasellus</h5>
-        <p>
-          Phasellus pharetra tempus quam in imperdiet. Quisque euismod, arcu vel elementum interdum, nulla risus laoreet mi, in iaculis nulla nibh ut augue.
-        </p>
-        
-        <h5 id=item1-2>Phasellus</h5>
-        <p>
-          Phasellus pharetra tempus quam in imperdiet. Quisque euismod, arcu vel elementum interdum, nulla risus laoreet mi, in iaculis nulla nibh ut augue.
-        </p>
-        <h4 id="item2">Lorem ipsum</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat fringilla dui sed vestibulum. In ultricies libero vitae sapien dapibus vehicula. Aliquam rutrum, leo id sollicitudin sollicitudin, sapien justo suscipit dolor, quis feugiat lorem neque iaculis ante. Nam vehicula aliquet velit, facilisis suscipit justo pretium id. Nullam eu interdum lorem.
-        </p>
-  
-        <h4 id="item3">Lorem ipsum</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat fringilla dui sed vestibulum. In ultricies libero vitae sapien dapibus vehicula. Aliquam rutrum, leo id sollicitudin sollicitudin, sapien justo suscipit dolor, quis feugiat lorem neque iaculis ante. Nam vehicula aliquet velit, facilisis suscipit justo pretium id. Nullam eu interdum lorem.
-        </p>
-  
-        <h5 id=item3-1>Quisque non libero</h5>
-        <p>
-          tempor, mattis mi sed, finibus eros. Sed ultricies pretium commodo. Donec quis massa nec arcu gravida iaculis. Praesent ut ultrices dolor. Nunc lacinia cursus diam, non bibendum mi tincidunt eget. Praesent euismod tempus dui non scelerisque. Aliquam bibendum facilisis elit ac tincidunt. Quisque ac facilisis orci, ac accumsan neque
-        </p>
-  
-        <h5 id=item3-2>Phasellus</h5>
-        <p>
-          Phasellus pharetra tempus quam in imperdiet. Quisque euismod, arcu vel elementum interdum, nulla risus laoreet mi, in iaculis nulla nibh ut augue.
-        </p>
-        
-  
-      </div>
-    </div>
-  </div>
-</div>
--->
 
 <h1 class="display-4" style="text-align: center; margin-top: 40px;">
   Livros de {{nomeAutor}}
@@ -142,7 +41,8 @@
           <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
           <p class="card-text">{{livro.edicao}} - {{livro.numeroPaginas}} páginas</p>
           <a href="#" class="card-link">Ver livro</a>
-          <a class="card-link" [routerLink]="['/alterarLivro', livro.id, livro.titulo, livro.autor, livro.numeroPaginas, livro.edicao]">Alterar</a>
+          <a class="card-link"
+            [routerLink]="['/alterarLivro', livro.id, livro.titulo, livro.autor, livro.numeroPaginas, livro.edicao]">Alterar</a>
           <a class="card-link" [routerLink]="['/excluirLivro', livro.id]">Excluir</a>
         </div>
       </div>
