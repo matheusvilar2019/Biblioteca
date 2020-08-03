@@ -23,6 +23,10 @@ export class Providers {
     return this.http.put(API_URL + '/livro/alterar/', dadosLivro).pipe(take(1));
   }
 
+  updateUmaInformação(id, viewsAutor){
+    return this.http.put(API_URL + '/autor/alterarViews/' + id, {"viewsAutor": viewsAutor});
+  }
+
   remove(dadosLivro){
     return this.http.delete(API_URL + '/livro/excluir/' + dadosLivro).pipe(take(1));
   }

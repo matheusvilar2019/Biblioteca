@@ -13,8 +13,6 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" [routerLink]="['/autores']">Autores</a>
           <a class="dropdown-item" [routerLink]="['/livros']">Livros</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Outra coisa</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -24,8 +22,6 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" [routerLink]="['/publicarAutor']">Autor</a>
           <a class="dropdown-item" [routerLink]="['/publicarLivro']">Livro</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Outra coisa</a>
         </div>
       </li>
       <li class="nav item dropdown">
@@ -33,7 +29,7 @@
           Top
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item">Autores</a>
+          <a class="dropdown-item"[routerLink]="['/topAutores']">Autores</a>
           <a class="dropdown-item">Livros</a>
         </div>
       </li>

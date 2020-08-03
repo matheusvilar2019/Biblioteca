@@ -16,6 +16,7 @@ import { PublicarLivroComponent } from './publicar-livro/publicar-livro.componen
 import { LivroPorAutorComponent } from './livro-por-autor/livro-por-autor.component'; 
 import { AlterarLivroComponent } from './alterar-livro/alterar-livro.component';
 import { ExcluirLivroComponent } from './excluir-livro/excluir-livro.component';
+import { TopAutoresComponent } from './top-autores/top-autores.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ExcluirLivroComponent } from './excluir-livro/excluir-livro.component';
     LivroPorAutorComponent,
     AlterarLivroComponent,
     ExcluirLivroComponent,
+    TopAutoresComponent,
     
   ],
   imports: [
