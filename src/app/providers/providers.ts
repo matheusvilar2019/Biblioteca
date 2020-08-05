@@ -27,6 +27,11 @@ export class Providers {
     return this.http.put(API_URL + '/autor/alterarViews/' + id, {"viewsAutor": viewsAutor});
   }
 
+  //Update em apenas uma informação
+  updateViewsLivro(id, viewsLivro){
+    return this.http.put(API_URL + '/livro/alterarViews/' + id, {'viewsLivro': viewsLivro});
+  }
+
   remove(dadosLivro){
     return this.http.delete(API_URL + '/livro/excluir/' + dadosLivro).pipe(take(1));
   }

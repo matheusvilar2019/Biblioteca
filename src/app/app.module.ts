@@ -17,6 +17,8 @@ import { LivroPorAutorComponent } from './livro-por-autor/livro-por-autor.compon
 import { AlterarLivroComponent } from './alterar-livro/alterar-livro.component';
 import { ExcluirLivroComponent } from './excluir-livro/excluir-livro.component';
 import { TopAutoresComponent } from './top-autores/top-autores.component';
+import { VerLivroComponent } from './ver-livro/ver-livro.component';
+import { TopLivrosComponent } from './top-livros/top-livros.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { TopAutoresComponent } from './top-autores/top-autores.component';
     AlterarLivroComponent,
     ExcluirLivroComponent,
     TopAutoresComponent,
+    VerLivroComponent,
+    TopLivrosComponent,
     
   ],
   imports: [

@@ -9,6 +9,8 @@ import { LivroPorAutorComponent } from "./livro-por-autor/livro-por-autor.compon
 import { AlterarLivroComponent } from "./alterar-livro/alterar-livro.component";
 import { ExcluirLivroComponent } from "./excluir-livro/excluir-livro.component";
 import { TopAutoresComponent } from "./top-autores/top-autores.component";
+import { VerLivroComponent } from "./ver-livro/ver-livro.component";
+import { TopLivrosComponent } from "./top-livros/top-livros.component";
 
 const routes: Routes = [
     { path: 'livros', component: LivrosComponent },
@@ -19,6 +21,8 @@ const routes: Routes = [
     { path: 'alterarLivro/:id/:titulo/:autor/:numeroPaginas/:edicao', component: AlterarLivroComponent},
     { path: 'excluirLivro/:id', component: ExcluirLivroComponent},
     { path: 'topAutores', component: TopAutoresComponent},
+    { path: 'verLivro/:id', component: VerLivroComponent},
+    { path: 'topLivros', component: TopLivrosComponent },
     { path: '**', component: InicialComponent}
 ];
 

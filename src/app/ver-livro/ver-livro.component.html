@@ -1,10 +1,10 @@
-<div *ngFor="let a of autor" class="container">
+<div class="container">
   <div class="row">
 
     <div class="col-12 text-center my-5">
 
-      <h1 class="display-1">{{nomeAutor}}</h1>
-      <p>{{a.areaAutor}}</p>
+      <h1 class="display-1">{{livro.titulo}}</h1>
+      <p [routerLink]="['/livroPorAutor', livro.autor]" >{{livro.autor}}</p>
 
     </div>
 
@@ -16,8 +16,8 @@
       <div data-spy="scroll" data-target="#navbarVertical" data-offset="0">
 
         <div>
-          <h4 id="item1">Sobre o Autor</h4>
-            <p style="text-align: justify;" [innerText]="a.resumoAutor">
+          <h4 id="item1">Sobre o Livro</h4>
+            <p style="text-align: justify;" [innerText]="livro.resumoLivro">
             </p>
         </div>
 
@@ -28,8 +28,10 @@
 </div>
 
 <h1 class="display-4" style="text-align: center; margin-top: 40px;">
-  Livros de {{nomeAutor}}
+  Livros de
 </h1>
+
+
 
 <div class="container">
   <div class="row">
@@ -40,7 +42,7 @@
           <h5 class="card-title">{{livro.titulo}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
           <p class="card-text">{{livro.edicao}} - {{livro.numeroPaginas}} páginas</p>
-          <a class="card-link" [routerLink]="['/verLivro', livro.id]">Ver livro</a>
+          <a href="#" class="card-link">Ver livro</a>
           <a class="card-link"
             [routerLink]="['/alterarLivro', livro.id, livro.titulo, livro.autor, livro.numeroPaginas, livro.edicao]">Alterar</a>
           <a class="card-link" [routerLink]="['/excluirLivro', livro.id]">Excluir</a>
