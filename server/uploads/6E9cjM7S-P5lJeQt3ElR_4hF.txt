@@ -1,0 +1,27 @@
+Nao é sempre que dá a msg, nao é sempre com o mesmo arquivo
+
+é meio complicado por isso nao consigos resolver
+
+
+já tivemos esse chamado
+
+acompanha e vê se dá o mesmo erro com o mesmo arquivo
+
+
+
+tamanho do banco
+
+
+--junto com o arquivo pegar o bkp
+
+-- nao arrumamos nada e resolveu sozinho
+
+
+---------------------------------
+
+
+processou o primeiro arquivo e já parou - processou pela segunda vez o primeiro arquivo, deu certo, mas nao processou os demais arquivos por receio.
+
+
+887848408
+hp883c

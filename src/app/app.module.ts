@@ -19,6 +19,8 @@ import { ExcluirLivroComponent } from './excluir-livro/excluir-livro.component';
 import { TopAutoresComponent } from './top-autores/top-autores.component';
 import { VerLivroComponent } from './ver-livro/ver-livro.component';
 import { TopLivrosComponent } from './top-livros/top-livros.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
+import { UploadFileServiceService } from './upload-file/uploadFileService/upload-file-service.service';
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { TopLivrosComponent } from './top-livros/top-livros.component';
     TopAutoresComponent,
     VerLivroComponent,
     TopLivrosComponent,
+    UploadFileComponent,
     
   ],
   imports: [
@@ -47,7 +50,7 @@ import { TopLivrosComponent } from './top-livros/top-livros.component';
   exports: [
     LivrosComponent
   ],
-  providers: [Providers],
+  providers: [Providers, UploadFileServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
