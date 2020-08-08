@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadFileServiceService } from './uploadFileService/upload-file-service.service';
+import { HttpEventType, HttpEvent } from '@angular/common/http';
 
 @Component({
   selector: 'app-upload-file',
@@ -9,6 +10,7 @@ import { UploadFileServiceService } from './uploadFileService/upload-file-servic
 export class UploadFileComponent implements OnInit {
 
   files: Set<File>;
+  progress = 0;
 
   constructor(private service: UploadFileServiceService) { }
 
@@ -29,12 +31,26 @@ export class UploadFileComponent implements OnInit {
     }
 
     document.getElementById('customFileLabel').innerHTML = fileNames.join(', ');
+
+    this.progress = 0;
   }
 
   onUpload(){
     if (this.files && this.files.size > 0){
-      this.service.upload(this.files, 'http://localhost:8000/upload')
-        .subscribe(response => console.log('Upload Concluido'));
+      this.service.upload(this.files, '/api/upload')
+        .subscribe((event: HttpEvent<Object>) => {
+          //HttpEventType
+          console.log(event);
+          if (event.type == HttpEventType.Response){
+            console.log('Upload Concluido');
+          }
+
+          else if (event.type == HttpEventType.UploadProgress){
+            const percentDone = Math.round((event.loaded * 100) / event.total);
+            console.log('Progresso', percentDone);
+            this.progress = percentDone;
+          }
+        } );
     }
   }
 
