@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadFileServiceService } from './uploadFileService/upload-file-service.service';
 import { HttpEventType, HttpEvent } from '@angular/common/http';
+import { filterResponse, uploadProgress } from '../shared/rxjs-operators';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-upload-file',
@@ -37,21 +39,59 @@ export class UploadFileComponent implements OnInit {
 
   onUpload(){
     if (this.files && this.files.size > 0){
-      this.service.upload(this.files, '/api/upload')
+      this.service.upload(this.files, 'http://localhost:9000/uploadFile2/12')
+        .pipe(
+          uploadProgress(progress => {
+            console.log(progress);
+            this.progress = progress;
+          }),
+          filterResponse()
+        )
+        //.subscribe(response => console.log('Upload Concluido'));
+        .subscribe(response => this.teste(response));
+        /*
         .subscribe((event: HttpEvent<Object>) => {
-          //HttpEventType
-          console.log(event);
+          //console.log(event);
           if (event.type == HttpEventType.Response){
             console.log('Upload Concluido');
           }
 
           else if (event.type == HttpEventType.UploadProgress){
             const percentDone = Math.round((event.loaded * 100) / event.total);
-            console.log('Progresso', percentDone);
+            //console.log('Progresso', percentDone);
             this.progress = percentDone;
           }
         } );
+        */
     }
   }
 
+  teste(response){
+    console.log(response.fileDownloadUri)
+  }
+
+  onDownloadExcel(){
+    this.service.download('/api/downloadExcel')
+      .subscribe((res: any) => {
+        const file = new Blob([res], {
+          type: res.type
+        });
+
+        const blob = window.URL.createObjectURL(file);
+
+        const link = document.createElement('a');
+        link.href = blob;
+        link.download = 'report.xlsx';
+
+        link.click();
+
+        window.URL.revokeObjectURL(blob);
+        link.remove();
+      });
+
+  }
+
+  onDownloadPDF(){
+
+  }
 }
