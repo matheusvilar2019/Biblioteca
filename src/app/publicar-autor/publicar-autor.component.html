@@ -9,9 +9,24 @@
       <label for="formGroupExampleInput">Nome do Autor</label>
       <input formControlName="nomeAutor" type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do Autor" style="width: 450px">
     </div>
+    <!--
     <div class="form-group">
       <label for="formGroupExampleInput2">Imagem do Autor</label>
       <input formControlName="imgAutor" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Imagem do Autor" style="width: 450px">
+    </div>
+    -->
+    <div style="margin-top: 10px; width: 450px;">
+      <label>Imagem do Autor</label>
+      <div class="custom-file" style="margin-bottom: 5px">
+        <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)">
+        <label class="custom-file-label" for="customFile" id="customFileLabel">Selecionar Arquivo</label>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width]="progress + '%'">{{ progress }}%</div>
+      </div>
+    </div>
+    <div style="margin-top: 10px; margin-bottom: 10px;">
+      <button type="button" class="btn btn-primary" (click)="onUpload()" [disabled]="!files">Upload</button>
     </div>
     <div class="form-group">
       <label for="formGroupExampleInput3">Area do Autor</label>
@@ -23,7 +38,9 @@
       <textarea formControlName="resumoAutor" type="text" class="form-control" id="exampleFormControlTextarea1" rows="8" style="width: 450px" maxlength="5000"></textarea>
     </div>
 
+    
     <button type="submit" class="btn btn-primary mb-2" style="width: 125px">Publicar</button>
   </form>
+
   
 </div>

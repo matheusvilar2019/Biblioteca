@@ -9,9 +9,9 @@ export class Providers {
 
   constructor(private http: HttpClient) { }
 
-  publicarAutorProvider(dados){
+  publicarAutorProvider(json){
     console.log("Agora pelo provider =)");
-    return this.http.post(API_URL + '/autor/salvar', dados)
+    return this.http.post(API_URL + '/autor/salvar', json)
   }
 
   publicarLivroProvider(dadosLivro){

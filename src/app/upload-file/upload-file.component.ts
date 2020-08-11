@@ -39,7 +39,7 @@ export class UploadFileComponent implements OnInit {
 
   onUpload(){
     if (this.files && this.files.size > 0){
-      this.service.upload(this.files, 'http://localhost:9000/uploadFile2/12')
+      this.service.upload(this.files, 'http://localhost:9090/biblioteca/uploadFile2/12')
         .pipe(
           uploadProgress(progress => {
             console.log(progress);
