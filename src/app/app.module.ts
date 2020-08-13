@@ -21,6 +21,8 @@ import { VerLivroComponent } from './ver-livro/ver-livro.component';
 import { TopLivrosComponent } from './top-livros/top-livros.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { UploadFileServiceService } from './upload-file/uploadFileService/upload-file-service.service';
+import { AreaComponent } from './area/area.component';
+import { AutorPorAreaComponent } from './autor-por-area/autor-por-area.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { UploadFileServiceService } from './upload-file/uploadFileService/upload
     VerLivroComponent,
     TopLivrosComponent,
     UploadFileComponent,
+    AreaComponent,
+    AutorPorAreaComponent,
     
   ],
   imports: [

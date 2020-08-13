@@ -12,6 +12,8 @@ import { TopAutoresComponent } from "./top-autores/top-autores.component";
 import { VerLivroComponent } from "./ver-livro/ver-livro.component";
 import { TopLivrosComponent } from "./top-livros/top-livros.component";
 import { UploadFileComponent } from "./upload-file/upload-file.component";
+import { AreaComponent } from "./area/area.component";
+import { AutorPorAreaComponent } from "./autor-por-area/autor-por-area.component";
 
 const routes: Routes = [
     { path: 'livros', component: LivrosComponent },
@@ -25,6 +27,8 @@ const routes: Routes = [
     { path: 'verLivro/:id', component: VerLivroComponent},
     { path: 'topLivros', component: TopLivrosComponent },
     { path:'uploadFile', component: UploadFileComponent},
+    { path: 'areas', component: AreaComponent},
+    { path: 'autorPorArea/:area', component: AutorPorAreaComponent},
     { path: '**', component: InicialComponent}
 ];
 
