@@ -1,14 +1,15 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="margin-bottom: 3rem;">
   <a class="navbar-brand" [routerLink]="['']">Biblioteca</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           Visualizar
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -18,7 +19,8 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           Publicar
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -27,11 +29,12 @@
         </div>
       </li>
       <li class="nav item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           Top
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"[routerLink]="['/topAutores']">Autores</a>
+          <a class="dropdown-item" [routerLink]="['/topAutores']">Autores</a>
           <a class="dropdown-item" [routerLink]="['/topLivros']">Livros</a>
         </div>
       </li>
@@ -44,6 +47,14 @@
 </nav>
 
 <router-outlet></router-outlet>
+
+
+<footer>
   <div style="background-color: #292e33; height: 170px; margin-top: 100px">
     <p style="text-align: center; color: white; padding-top: 75px;">Biblioteca - 2020</p>
   </div>
+</footer>
+
+
+
+<!-- FOOTER -->
