@@ -28,7 +28,7 @@
 </div>
 
 <h1 class="display-4" style="text-align: center; margin-top: 40px;">
-  Livros de
+  Livros de {{livro.autor}}
 </h1>
 
 
@@ -36,7 +36,7 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-4" *ngFor="let livro of livros">
+    <div class="col-md-4" *ngFor="let livro of livrosAutor">
       <div class="card" style="width: 18rem;" style="margin-top: 40px">
         <div class="card-body">
           <h5 class="card-title">{{livro.titulo}}</h5>

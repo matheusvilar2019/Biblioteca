@@ -1,10 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
 
+body {
+    padding-top: 3rem;
+    color: #5a5a5a;
+  }
+  
+  
+
 nav.navbar{
     margin-bottom: 22px;
 }
   
 .left {
-    padding-left: 20px;
+    padding-left: 30px;
+}
+
+.altura {
+    padding-top: 30px;
+    padding-left: 30px;
 }

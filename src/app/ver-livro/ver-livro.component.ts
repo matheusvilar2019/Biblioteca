@@ -11,6 +11,7 @@ import { Providers } from '../providers/providers';
 export class VerLivroComponent implements OnInit {
   id: string;
   livro: Object[] = [];
+  livrosAutor: Object[] = [];
 
   constructor(
     private http: HttpClient,
@@ -22,7 +23,7 @@ export class VerLivroComponent implements OnInit {
     this.id = this.route.snapshot.params.id;
 
     this.getLivro();
-    this.getViews();
+    this.getVariaveis();
   }
 
   getLivro(){
@@ -31,19 +32,32 @@ export class VerLivroComponent implements OnInit {
       .subscribe(livro => this.livro = livro);
   }
 
-  getViews(){
+
+
+  getVariaveis(){
     this.http
       .get<any>('http://localhost:9090/biblioteca/livro/' + this.id)
-      .subscribe(livro => this.updateViews(livro.id, (livro.viewsLivro + 1)));
+      .subscribe(livro => this.livroVariaveis(livro));
   }
 
-  updateViews(id, viewsLivro){
+  livroVariaveis(livro){
+    this.updateViews(livro);
+    this.getLivrosPorAutor(livro);
+  }
+
+  updateViews(livro){
     this.providers
-      .updateViewsLivro(id, viewsLivro)
+      .updateViewsLivro(livro.id, (livro.viewsLivro + 1))
       .subscribe(
-        () => console.log('ID: ' + id + ' | Views: ' + viewsLivro),
+        () => console.log('ID: ' + livro.id + ' | Views: ' + livro.viewsLivro),
         (err) => console.log(err)
       );
+  }
+
+  getLivrosPorAutor(livro){
+    this.http
+      .get<Object[]>('http://localhost:9090/biblioteca/livro/autor/' + livro.autor)
+      .subscribe(livrosAutor => this.livrosAutor = livrosAutor);
   }
 
 }
