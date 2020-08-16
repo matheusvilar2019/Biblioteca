@@ -4,7 +4,7 @@
     <div class="col-12 text-center my-5">
 
       <h1 class="display-1">{{nomeAutor}}</h1>
-      <p>{{a.areaAutor}}</p>
+      <p [routerLink]="['/autorPorArea', a.areaAutor]" style="cursor: pointer">{{a.areaAutor}}</p>
 
     </div>
 

@@ -20,7 +20,8 @@ export class PublicarLivroComponent implements OnInit {
       titulo: new FormControl(),
       autor: new FormControl(),
       numeroPaginas: new FormControl(),
-      edicao: new FormControl()
+      edicao: new FormControl(),
+      resumoLivro: new FormControl()
     })
   }
 

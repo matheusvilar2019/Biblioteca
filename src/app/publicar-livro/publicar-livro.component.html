@@ -20,13 +20,10 @@
       <label for="edicao">Edição</label>
       <input formControlName="edicao" type="text" class="form-control" id="edicao" placeholder="Edição" style="width: 450px">
     </div>
-
-    <!--
-      <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="width: 450px"></textarea>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Resumo sobre o Livro (máximo 5000 caracteres)</label>
+      <textarea formControlName="resumoLivro" type="text" class="form-control" id="exampleFormControlTextarea1" rows="8" style="width: 450px" maxlength="5000"></textarea>
     </div>
-    -->
     <button type="submit" class="btn btn-primary mb-2" style="width: 125px">Publicar</button>
   </form>
   

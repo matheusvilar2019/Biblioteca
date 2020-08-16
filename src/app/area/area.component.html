@@ -1,18 +1,12 @@
 <body style="padding-top: 3rem;">
-
-  <div class="card text-center" *ngFor="let area of areas" style="margin-top: 40px;">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">{{area.areaAutor}}</h5>
-      <p class="card-text">Descrição sobre a {{area.areaAutor}}.</p>
-      <a [routerLink]="['/autorPorArea', area.areaAutor]" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <div class="card-footer text-muted">
-      2 days ago
+  <div *ngFor="let area of areas">
+    <div [routerLink]="['/autorPorArea', area.areaAutor]" class="card text-white bg-secondary mb-3" style="max-width: 40rem; margin: 35px auto; cursor: pointer;">
+      <div class="card-header" style="text-align: center;">Header</div>
+      <div class="card-body">
+        <h5 class="card-title" style="text-align: center;">{{area.areaAutor}}</h5>
+        <p class="card-text" style="text-align: center;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
     </div>
   </div>
-
 </body>
 

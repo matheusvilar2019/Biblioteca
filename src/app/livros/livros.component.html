@@ -27,7 +27,7 @@
 
       <div class="card" style="width: 18rem;" style="margin-bottom: 40px">
         <div class="card-body">
-          <h5 class="card-title">{{livro.titulo}} - {{livro.viewsLivro}} Views</h5>
+          <h5 class="card-title">{{livro.titulo}} <span class="badge badge-primary badge-pill">{{livro.viewsLivro}} Views</span></h5>
           <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
           <p class="card-text">{{livro.edicao}} - {{livro.numeroPaginas}} páginas</p>
           <a href="#" class="card-link" [routerLink]="['/verLivro', livro.id]">Ver livro</a>
